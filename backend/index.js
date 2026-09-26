@@ -14,7 +14,7 @@ const dbName = "user_db";
 const app = express();
 app.use(cors({
   origin: [
-    "http://localhost:3000"
+    "http://localhost:3000/"
   ]
 }));
 app.use(express.json());
