@@ -1,28 +1,28 @@
 FROM node:24-alpine3.22 
 
 # create user
-RUN addgroup -S app && adduser -S reza -G app
+RUN addgroup -S app && adduser -S app -G app
 
 WORKDIR /app
 
 # copy package files
-COPY --chown=reza:app package*.json ./
+COPY --chown=app:app package*.json ./
 
 # install deps
 RUN npm install
 RUN npm install -g --froce nodemon 
 
 # copy source
-COPY --chown=reza:app . .
+COPY --chown=app:app . .
 
 # permissions
-RUN chown -R reza:app /app
+RUN chown -R app:app /app
 
 # env
 
 
 # non-root user 
-USER reza
+USER app
 
 # port
 EXPOSE 3001
