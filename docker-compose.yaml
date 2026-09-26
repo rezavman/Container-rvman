@@ -25,7 +25,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=pass123
     volumes:
-      - mongodb-sarvin:/data/db
+      - mongodb-test:/data/db
   mongoExpress:
     image: mongo-express
     ports:
@@ -40,7 +40,7 @@ services:
     depends_on:
       - db
 volumes:
-  mongodb-sarvin:
+  mongodb-test:
    
 
 
