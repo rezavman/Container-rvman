@@ -24,7 +24,7 @@ COPY --chown=app:app . .
 
 # Environment variable for backend API URL
 # NOTE: In Docker Compose, this should usually be overridden there
-ENV REACT_APP_API_URL=http://localhost:3001 
+ENV REACT_APP_API_URL=http://localhost:3001/
 
 # Expose React development server port
 EXPOSE 3000
