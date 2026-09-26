@@ -11,7 +11,7 @@ WORKDIR /app
 RUN chown -R reza:app /app
 
 # Switch to non-root user (security best practice)
-USER app
+USER reza
 
 # Copy package files first (for better Docker cache usage)
 COPY --chown=reza:app package*.json .
